@@ -75,3 +75,15 @@ Ejecutar:
 ```bash
 go get -u github.com/edme88/greetings
 ```
+
+Secciones:
+
+1. Introducción
+2. Primeros pasos von Go
+3. Uso de variables y datos
+4. Go - Control de flujos
+5. Go - Estructura de datos
+6. Go - Control de errores
+7. Crear un módulo - Proyecto
+8. Go - POO e Interfaces
+9. Go - Concurrencia en Go
