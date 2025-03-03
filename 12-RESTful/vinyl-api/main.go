@@ -45,6 +45,37 @@ func postAlbums(ctx *gin.Context){
 	ctx.IndentedJSON(http.StatusCreated, newAlbum)
 }
 
+func putAlbumsByID(ctx *gin.Context){
+	id := ctx.Param("id")
+	var modifyAlbum album
+	if err := ctx.BindJSON(&modifyAlbum); err != nil{
+		ctx.IndentedJSON(http.StatusNotFound, gin.H{"message": "Datos inválidos"})
+		return
+	}
+	
+	for i, a := range albums {
+		if a.ID == id {
+			albums[i] = modifyAlbum
+			albums[i].ID = id
+			ctx.IndentedJSON(http.StatusOK, albums[i])
+			return
+		}
+	}
+	ctx.IndentedJSON(http.StatusNotFound, gin.H{"message": "album no encontrado"})
+}
+
+func deleteAlbumsByID(ctx *gin.Context){
+	id := ctx.Param("id")
+	for i, a := range albums {
+		if a.ID == id {
+			albums = append(albums[:i], albums[i+1])
+			ctx.IndentedJSON(http.StatusOK, gin.H{"message": "album eliminado"})
+			return
+		}
+	}
+	ctx.IndentedJSON(http.StatusNotFound, gin.H{"message": "album no encontrado"})
+}
+
 func main(){
 	fmt.Println("Bienvenido a la API de vinyl-api!")
 	router := gin.Default()
@@ -52,5 +83,7 @@ func main(){
 	router.GET("/albums", getAlbums)
 	router.GET("/albums/:id", getAlbumsByID)
 	router.POST("/albums", postAlbums)
+	router.PUT("/albums/:id", putAlbumsByID) //Quedo de Tarea
+	router.DELETE("/albums/:id", deleteAlbumsByID) //Quedo de Tarea
 	router.Run("localhost:8080")
 }
