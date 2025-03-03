@@ -18,5 +18,10 @@ PUT /albums/:id - Modificar un album específico
 3. Ejecutar `go get -u github.com/gin-gonic/gin`
 4. Importar en el documento
 5. Levantar el servidor
+6. Crear struc para los ambums
+7. Revisar doc https://developer.mozilla.org/es/docs/Web/HTTP/Status
+8. Leer doc https://pkg.go.dev/net/http
+9. Entrar en el navegador a `http://localhost:8080/albums`
+10. Usar postman o `Thunder Client` (extension del VSC)
 
 Lo guardaremos en la memoria en lugar de la BD para simplificar temporalmente

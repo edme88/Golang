@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"net/http"
 
 	"github.com/gin-gonic/gin"
 )
@@ -19,15 +20,15 @@ var albums = []album{
 	{ID: "2", Title: "Somewhere in Time", Artist: "Iron Maiden", Year: 1986, Price: "u$d 40"},
 }
 
+func getAlbums(ctx *gin.Context){
+	ctx.IndentedJSON(http.StatusOK,albums)
+}
+
 func main(){
 	fmt.Println("Bienvenido a la API de vinyl-api!")
-
+jjjjjjjjn
 	router := gin.Default()
 
-	router.GET("/", func(ctx *gin.Context) {
-		ctx.JSON(200, gin.H{
-			"message": "Hola Mundo",
-		})
-	})
+	router.GET("/albums", getAlbums)
 	router.Run("localhost:8080")
 }
