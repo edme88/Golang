@@ -81,9 +81,12 @@ Secciones:
 1. Introducción
 2. Primeros pasos von Go
 3. Uso de variables y datos
-4. Go - Control de flujos
-5. Go - Estructura de datos
-6. Go - Control de errores
-7. Crear un módulo - Proyecto
-8. Go - POO e Interfaces
-9. Go - Concurrencia en Go
+4. Control de flujos
+5. Estructura de datos
+6. Control de errores
+7. Crear un módulo
+8. POO e Interfaces
+9. Concurrencia en Go
+10. Funciones avanzadas
+11. Genericos
+12. Introducción a API RESTful con Gin
