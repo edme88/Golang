@@ -29,15 +29,20 @@ func loadPage(title string) (*Page, error) {
 func viewHandler(w http.ResponseWriter, r *http.Request){
 	title := r.URL.Path[len("/view/"):]
 	p, _ := loadPage(title)
-	t, _ := template.ParseFiles("view.html")
+	//t, _ := template.ParseFiles("view.html")
 	//*fmt.Fprintf(w, "<h1>%s</h1> <div>%s</div>", p.Title, p.Body)*////
-	t.Execute(w, p)
+	//t.Execute(w, p)
+	renderTemplates(w, "view", p)
 }
 
 func editHandler(w http.ResponseWriter, r *http.Request){
 	title := r.URL.Path[len("/edit/"):]
 	p, _ := loadPage(title)
-	t, _ := template.ParseFiles("edit.html")
+	renderTemplates(w, "edit", p)
+}
+
+func renderTemplates(w http.ResponseWriter, tmpl string, p *Page){
+	t, _ := template.ParseFiles(tmpl + ".html")
 	t.Execute(w, p)
 }
 
