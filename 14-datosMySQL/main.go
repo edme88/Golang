@@ -2,6 +2,8 @@ package main
 
 import (
 	"datosMySQL/database"
+	"datosMySQL/handlers"
+
 	"log"
 
 	_ "github.com/go-sql-driver/mysql"
@@ -26,5 +28,7 @@ func main() {
 		log.Fatal(err)
 	}
 	defer db.Close()
+
+	handlers.ListContacts(db)
 
 }
