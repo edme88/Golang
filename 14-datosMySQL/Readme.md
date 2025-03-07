@@ -100,3 +100,12 @@ Para instalar el driver
 go get -u github.com/go-sql-driver/mysql
 
 111. Variables de entorno
+
+https://pkg.go.dev/os
+
+https://pkg.go.dev/github.com/joho/godotenv //Para trabajar con variables de entorno
+
+https://github.com/joho/godotenv -> https://github.com/joho/godotenv
+
+instalar usando
+`go get github.com/joho/godotenv`
