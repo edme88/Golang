@@ -8,7 +8,7 @@ import (
 //recibe una url y una función handler
 //para registrar un controlador
 func Index(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, "Pagina de Inicio!")
+	fmt.Fprintln(w, "Página de Inicio!")
 }
 
 func NewGame(w http.ResponseWriter, r *http.Request) {
