@@ -2,16 +2,37 @@ package handlers
 
 import (
 	"fmt"
+	"html/template"
 	"net/http"
 )
 
 //recibe una url y una función handler
 //para registrar un controlador
 func Index(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, "Página de Inicio!")
+	//fmt.Fprintln(w, "<h1>Página de Inicio!</h1>") //No usar html
+	tpl, err := template.ParseFiles("templates/index.html") //Analiza una lista del nombre de las plantillas
+	if err != nil {
+		http.Error(w, "Error al analizar plantillas", http.StatusInternalServerError)
+	}
+	err = tpl.Execute(w, nil)
+	if err != nil{
+		http.Error(w, "Error al renderizar la plantilla", http.StatusInternalServerError)
+	}
+
+	//Para enviar datos se pueden emplear estructuras o mapas
+	//de manera directa crear estrictura e inicializar los datos
+	data := struc {
+		Title string
+		Message string
+	}{
+		Title: "Página de inicio",
+		Message: "Bienvenido"
+	}
 }
 
 func NewGame(w http.ResponseWriter, r *http.Request) {
+
+	
 	fmt.Fprintln(w, "Crear nuevo juego")
 }
 
