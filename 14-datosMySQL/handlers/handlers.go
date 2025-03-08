@@ -76,3 +76,16 @@ func GetContactByID(db *sql.DB, contactID int){
 		contact.Id, contact.Name, contact.Email, contact.Phone)
 		fmt.Println("-----------------------")
 }
+
+//CreateContact registra un nuevo contacto rn la base de datos
+func CreateContact(db *sql.DB, contact models.Contact){
+	
+
+	query := "INSERT INTO contact (name, email, phone) values (?, ?, ?);";
+	_, err := db.Exec(query, contact.Name, contact.Email, contact.Phone)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	log.Println("Nuevo contacto registrado con éxito")
+}

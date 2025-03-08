@@ -3,6 +3,7 @@ package main
 import (
 	"datosMySQL/database"
 	"datosMySQL/handlers"
+	"datosMySQL/models"
 
 	"log"
 
@@ -31,6 +32,22 @@ func main() {
 
 	handlers.ListContacts(db)
 
-	handlers.GetContactByID(db, 6)
+	handlers.GetContactByID(db, 3)
 
+	//Crear una instancia de Contact
+	newContact := models.Contact{
+		Name: "Nuevo Usuario",
+		Email: "nuevo@example.com",
+		Phone: "123456789",
+	}
+
+	handlers.CreateContact(db, newContact)
+
+	// var name, email, phone string
+// 	fmt.Print("Ingrese un NOMBRE: ")
+// 	fmt.Scanln(&name)
+// 	fmt.Print("Ingrese un EMAIL: ")
+// 	fmt.Scanln(&email)
+// 	fmt.Print("Ingrese un TELEFONO: ")
+// 	fmt.Scanln(&phone)
 }
