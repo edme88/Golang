@@ -89,3 +89,15 @@ func CreateContact(db *sql.DB, contact models.Contact){
 
 	log.Println("Nuevo contacto registrado con éxito")
 }
+
+// UpdateContact actualiza un contacto existente en la base de datos
+func UpdateContact(db *sql.DB, contact models.Contact){
+	query := "UPDATE contact SET name = ?, email  = ?, phone = ? WHERE id = ?";
+
+	_, err := db.Exec(query, contact.Name, contact.Email, contact.Phone, contact.Id)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	log.Println("Contacto actualizado con éxito")
+}

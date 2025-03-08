@@ -35,14 +35,24 @@ func main() {
 	handlers.GetContactByID(db, 3)
 
 	//Crear una instancia de Contact
+	// newContact := models.Contact{
+	// 	Name: "Nuevo Usuario",
+	// 	Email: "nuevo@example.com",
+	// 	Phone: "123456789",
+	// }
+	//handlers.CreateContact(db, newContact)
+
+	//ACTUALIZA una instancia de Contact
 	newContact := models.Contact{
-		Name: "Nuevo Usuario",
-		Email: "nuevo@example.com",
-		Phone: "123456789",
+		Id: 6,
+		Name: "Usuario MUY Nuevo",
+		Email: "nuevoNuevo@example.com",
+		Phone: "987654321",
 	}
 
-	handlers.CreateContact(db, newContact)
+	handlers.UpdateContact(db, newContact)
 
+	handlers.ListContacts(db)
 	// var name, email, phone string
 // 	fmt.Print("Ingrese un NOMBRE: ")
 // 	fmt.Scanln(&name)
