@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{ .Title }}</title>
+    {{ $data := . }}
+    <!-- Se pueden crear variables, for, if, etc -->
+    <title>{{ $data.Title }}</title>
   </head>
   <body>
-    <h1>{{ .Message }}</h1>
+    <h1>{{ $data.Message }}</h1>
   </body>
 </html>
