@@ -53,6 +53,11 @@ func main() {
 	handlers.UpdateContact(db, newContact)
 
 	handlers.ListContacts(db)
+
+	handlers.DeleteContact(db, 6)
+
+	handlers.ListContacts(db)
+
 	// var name, email, phone string
 // 	fmt.Print("Ingrese un NOMBRE: ")
 // 	fmt.Scanln(&name)
