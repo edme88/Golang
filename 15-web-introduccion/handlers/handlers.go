@@ -14,19 +14,19 @@ func Index(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		http.Error(w, "Error al analizar plantillas", http.StatusInternalServerError)
 	}
-	err = tpl.Execute(w, nil)
-	if err != nil{
-		http.Error(w, "Error al renderizar la plantilla", http.StatusInternalServerError)
-	}
 
 	//Para enviar datos se pueden emplear estructuras o mapas
 	//de manera directa crear estrictura e inicializar los datos
-	data := struc {
+	data := struct {
 		Title string
 		Message string
 	}{
 		Title: "Página de inicio",
-		Message: "Bienvenido"
+		Message: "Bienvenido a Pidra, Papel o Tijera",
+	}
+	err = tpl.Execute(w, data)
+	if err != nil{
+		http.Error(w, "Error al renderizar la plantilla", http.StatusInternalServerError)
 	}
 }
 
