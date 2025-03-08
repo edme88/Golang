@@ -31,4 +31,6 @@ func main() {
 
 	handlers.ListContacts(db)
 
+	handlers.GetContactByID(db, 6)
+
 }
