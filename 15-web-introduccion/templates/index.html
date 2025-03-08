@@ -1,11 +1,16 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
   <head>
     {{ $data := . }}
-    <!-- Se pueden crear variables, for, if, etc -->
+    <Se pueden crear variables, for, if, etc>
     <title>{{ $data.Title }}</title>
   </head>
   <body>
     <h1>{{ $data.Message }}</h1>
   </body>
-</html>
+</html> -->
+
+{{ template "base" . }} {{ define "title" }} Rock Paper Scisor - Inicio {{ end
+}} {{ define "content" }}
+<h1>Bienvenido a Rock - Paper - Scisor</h1>
+{{ end }}

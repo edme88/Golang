@@ -1,0 +1,20 @@
+{{ define "base" }}
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ template "title" . }}</title>
+  </head>
+  <body>
+    <header>
+      <h2>Encabezado</h2>
+    </header>
+    <main>{{ template "content" . }}</main>
+    <footer>
+      <p>Creado por <strong>Agus</strong> &copy; 2025</p>
+    </footer>
+  </body>
+</html>
+{{ end }}
