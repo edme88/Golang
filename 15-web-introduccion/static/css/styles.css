@@ -1,0 +1,24 @@
+header {
+  padding: 20px 0;
+  background-color: #abebc6;
+}
+
+a {
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.logo a {
+  color: rgb(8, 130, 89);
+}
+
+nav {
+  position: fixed;
+  right: 0px;
+}
+
+a:hover {
+  color: rgb(5, 112, 72);
+  font-weight: bold;
+}
