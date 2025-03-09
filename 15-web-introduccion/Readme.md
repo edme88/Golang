@@ -82,3 +82,17 @@ Archivos estáticos: CSS, Imágenes
 
 - Configurar y Servir archivos estáticos
 - Agregar CSS y Bootstrap y Js
+
+## Resumen (137)
+
+En esta sección del curso de Go web, aprendimos cómo trabajar con archivos estáticos en una aplicación web desarrollada con el lenguaje de programación Go. Los archivos estáticos, como hojas de estilo CSS, imágenes y scripts de JavaScript, son elementos fundamentales para el diseño y la interactividad de un sitio web. Aprendimos cómo configurar y servir estos archivos estáticos correctamente en nuestro servidor Go.
+
+En primer lugar, configuramos la estructura de directorios de nuestro proyecto Go para manejar los archivos estáticos de manera eficiente. Creamos una carpeta "static" en la raíz del proyecto y configuramos un enrutador para servir estos archivos adecuadamente.
+
+Luego, agregamos estilos a nuestras páginas web utilizando hojas de estilo CSS. Además, exploramos cómo agregar Bootstrap 5, uno de los frameworks de CSS más populares, a nuestro proyecto. Aprendimos a enlazar los archivos CSS de Bootstrap correctamente y aplicar estilos predefinidos a nuestros elementos HTML.
+
+También aprendimos cómo agregar imágenes estáticas a nuestro proyecto Go y mostrarlas correctamente en nuestras páginas HTML. Organizamos las imágenes en una carpeta "images" dentro de la carpeta "static" y enlazamos las rutas de las imágenes en nuestro código HTML.
+
+Finalmente, agregamos archivos de JavaScript estáticos a nuestro proyecto Go y ejecutamos código JavaScript en nuestras páginas HTML. Aprendimos a enlazar los archivos JavaScript y utilizamos bibliotecas y scripts personalizados para mejorar la funcionalidad de nuestro sitio web.
+
+Al final de esta sección, nos familiarizamos con el manejo de archivos estáticos en Go y pudimos crear aplicaciones web completas con estilos atractivos, imágenes llamativas y funciones interactivas utilizando CSS, Bootstrap, imágenes y JavaScript.
