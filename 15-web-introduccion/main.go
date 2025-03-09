@@ -12,6 +12,12 @@ func main() {
 	//Crear enrutador
 	router := http.NewServeMux()
 
+	//Manejador para servir los archivos estáticos
+	fs := http.FileServer(http.Dir("static")) //filesStatic
+
+	//Ruta para acceder a los archivos estáticos
+	router.Handle("/static/", http.StripPrefix("/static/", fs))
+
 	//Configurar rutas
 	router.HandleFunc("/", handlers.Index)
 	router.HandleFunc("/new", handlers.NewGame)
@@ -22,5 +28,4 @@ func main() {
 	port := ":8080"
 	log.Printf("Servidor escuchando en http://localhost%s\n", port)
 	log.Fatal(http.ListenAndServe(port, router))
-
 }
