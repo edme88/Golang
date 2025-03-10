@@ -96,3 +96,5 @@ También aprendimos cómo agregar imágenes estáticas a nuestro proyecto Go y m
 Finalmente, agregamos archivos de JavaScript estáticos a nuestro proyecto Go y ejecutamos código JavaScript en nuestras páginas HTML. Aprendimos a enlazar los archivos JavaScript y utilizamos bibliotecas y scripts personalizados para mejorar la funcionalidad de nuestro sitio web.
 
 Al final de esta sección, nos familiarizamos con el manejo de archivos estáticos en Go y pudimos crear aplicaciones web completas con estilos atractivos, imágenes llamativas y funciones interactivas utilizando CSS, Bootstrap, imágenes y JavaScript.
+
+(138)
