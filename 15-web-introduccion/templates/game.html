@@ -1,4 +1,74 @@
-{{ template "base" . }} {{ define "title" }} RPS - Juego {{ end }} {{ define
+{{ template "base" . }} {{ define "title" }} RPS - Jugar {{ end }} {{ define
 "content" }}
-<h1>Juego: Rock - Paper - Scisor</h1>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col py-5 text-center">
+        <h2>Agus</h2>
+        <p class="fw-bold">0</p>
+        <div class="d-grid gap-2 card p-3">
+          <button class="btn btn-outline-success">
+            <img
+              src="static/img/hand_rock.png"
+              alt="hand_rock"
+              width="50"
+              class="img-fluid"
+            />
+            <span class="fw-bold">Piedra</span>
+          </button>
+          <button class="btn btn-outline-success">
+            <img
+              src="static/img/hand_paper.png"
+              alt="hand_paper"
+              width="50"
+              class="img-fluid"
+            />
+            <span class="fw-bold">Papel</span>
+          </button>
+          <button class="btn btn-outline-success">
+            <img
+              src="static/img/hand_scissors.png"
+              alt="hand_scissors"
+              width="50"
+              class="img-fluid"
+            />
+            <span class="fw-bold">Tijera</span>
+          </button>
+        </div>
+      </div>
+      <div class="col py-5 text-center">
+        <h2>Computadora</h2>
+        <p class="fw-bold">0</p>
+        <div class="card p-3">
+          <div class="d-flex justify-content-center">
+            <img
+              src="static/img/reload_icon.png"
+              alt="reload_icon"
+              width="200"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="row">
+      <h2>Resultado</h2>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">El juador eligió ROCA</li>
+        <li class="list-group-item">La computadora eligió PAPEL</li>
+        <li class="list-group-item text-danger">La computadora gana</li>
+      </ul>
+    </div>
+  </div>
+  <div class="row text-center">
+    <div class="col py-3">
+      <a href="/new" class="btn btn-success btn-lg">Nuevo juego</a>
+    </div>
+  </div>
+</section>
 {{ end }}
