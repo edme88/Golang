@@ -4,7 +4,7 @@ define "content" }}
   <div class="container">
     <div class="row">
       <h2 class="text-center py-4">Ingrese su nombre</h2>
-      <form action="">
+      <form action="/game" method="post">
         <div class="mb-3">
           <input
             type="text"
@@ -12,6 +12,7 @@ define "content" }}
             id="name"
             placeholder="Ingrese su nombre"
             class="form-control"
+            required
           />
         </div>
         <div class="d-grid gap-2 py-4">
