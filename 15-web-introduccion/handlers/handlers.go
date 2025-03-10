@@ -1,10 +1,13 @@
 package handlers
 
 import (
+	"encoding/json"
 	"fmt"
 	"html/template"
 	"log"
 	"net/http"
+	"rps/rps" //package
+	"strconv"
 )
 
 type Player struct {
@@ -78,7 +81,24 @@ func Game(w http.ResponseWriter, r *http.Request) {
 }
 
 func Play(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, "Jugar")
+	//fmt.Fprintln(w, "Jugar")
+	playerChoice, _ := strconv.Atoi(r.URL.Query().Get("c"))
+	result := rps.PlayRound(playerChoice)
+
+	//Ingresar a http://localhost:8080/play?c=1
+	//fmt.Println(result)
+
+	out, err := json.MarshalIndent(result, "", "    ")
+	if err != nil {
+		log.Println(err)
+		return
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	w.Write(out)
+
+	//Ingresar a http://localhost:8080/play?c=2 y ver que pasa
+	
 }
 
 func About(w http.ResponseWriter, r *http.Request) {
