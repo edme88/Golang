@@ -98,7 +98,7 @@ func Play(w http.ResponseWriter, r *http.Request) {
 	w.Write(out)
 
 	//Ingresar a http://localhost:8080/play?c=2 y ver que pasa
-	
+
 }
 
 func About(w http.ResponseWriter, r *http.Request) {
@@ -121,4 +121,6 @@ func renderTemplate(w http.ResponseWriter, page string, data any){
 //Reiniciar valores
 func restartValue(){
 	player.Name = ""
+	rps.ComputerScore = 0
+	rps.PlayerScore = 0
 } 

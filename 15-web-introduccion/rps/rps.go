@@ -18,7 +18,7 @@ type Round struct {
 	RoundResult string `json:"round_result"`
 	ComputerChoiceInt int `json:"computer_choice_int"`
 	ComputerScore string `json:"computer_score"`
-	PlayerScore string `json:"placer_score"`
+	PlayerScore string `json:"player_score"`
 }
 
 //Mensajes para cuando gana
