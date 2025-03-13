@@ -97,4 +97,26 @@ Finalmente, agregamos archivos de JavaScript estáticos a nuestro proyecto Go y 
 
 Al final de esta sección, nos familiarizamos con el manejo de archivos estáticos en Go y pudimos crear aplicaciones web completas con estilos atractivos, imágenes llamativas y funciones interactivas utilizando CSS, Bootstrap, imágenes y JavaScript.
 
-(138)
+## Código fuente (148)
+
+El repositorio [alexroel/rpsweb-go](https://github.com/alexroel/rpsweb-go) es un proyecto que hemos desarrollado y compartido contigo. Contiene un juego de Piedra, Papel o Tijera implementado utilizando el lenguaje de programación Go.
+
+A continuación, puedes seguir estos pasos para descargar, instalar y ejecutar el juego:
+
+1. Descarga el repositorio haciendo clic en el enlace: [alexroel/rpsweb-go](https://github.com/alexroel/rpsweb-go/archive/refs/heads/main.zip).
+
+2. Extrae el archivo ZIP descargado en tu computadora.
+
+3. Ejecuta el siguiente comando para compilar y ejecutar la aplicación:
+
+`go run main.go`
+
+4. Abre tu navegador web y visita la siguiente URL:
+
+`http://localhost:8080`
+
+5. Una vez que hayas accedido a la URL, podrás jugar al Piedra, Papel o Tijera contra la computadora. Sigue las instrucciones en pantalla para seleccionar tu opción y ver el resultado de la partida.
+
+Descarga el juego aquí: [alexroel/rpsweb-go](https://github.com/alexroel/rpsweb-go/archive/refs/heads/main.zip)
+
+(149)
