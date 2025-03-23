@@ -7,6 +7,7 @@
 159. Ping
 160. Crear Tabla
 161. Verificar si una tabla existe
+162. Exec y Query
 
 # Instalación
 
@@ -89,8 +90,19 @@ show tables;
 show columns from users;
 ```
 
+### 161. Verificar si una tabla existe
+
 Usar comando:
 
 ```
 show tables like 'users';
 ```
+
+### 162. Exec y Query
+
+Ver documentación: https://pkg.go.dev/database/sql
+
+Leer como funciona el Execute:
+https://pkg.go.dev/database/sql#DB.Exec
+
+Polimorfismo de Exec y Query
