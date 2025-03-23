@@ -8,6 +8,14 @@
 160. Crear Tabla
 161. Verificar si una tabla existe
 162. Exec y Query
+163. Truncate table
+164. Insertar Registros
+165. Id del último registro
+166. Listar Registros
+167. Obtener un Registro
+168. Editar un registro
+169. Eliminar un registro
+170. Resumen
 
 # Instalación
 
@@ -106,3 +114,23 @@ Leer como funciona el Execute:
 https://pkg.go.dev/database/sql#DB.Exec
 
 Polimorfismo de Exec y Query
+
+### 163. Truncate table
+
+Para borrar todos los registros de una tabla
+
+### 164. Insertar Registros
+
+Una vez agregada las funciones en users.go ejecutar en el CLI de MySQL:
+
+```bash
+select * from users;
+```
+
+### Resumen
+
+Codigo fuente en GitHub
+Código de la sección
+Aquí les dejo el repositorio de GitHub y el código fuente descargable para que lo tengan a la mano por si lo llegan a necesitar, pero recuerden, es mejor que ustedes escriban el código y experimenten todo de primera mano.
+
+[Ejemplo en Github](https://github.com/alexroel/curso-goweb/tree/master/04-go-mysql)

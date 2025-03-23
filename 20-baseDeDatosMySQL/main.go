@@ -10,7 +10,23 @@ func main(){
 	db.Connect()
 
 	fmt.Println(db.ExistsTable("users"))
-	db.CreateTable(models.UserSchema, "users")
-	db.Ping()
+	//db.CreateTable(models.UserSchema, "users")
+	models.CreateUser("agusNew", "agusN123", "agusNew@ejemplo.com")
+	//db.Ping()
+	//db.TruncateTable("users")
+	//user := models.GetUser(2)
+	//fmt.Println(user)
+
+	// user.Username = "Juan"
+	// user.Password = "juan789"
+	// user.Email = "juan@email.com"
+	// user.Save()
+
+	//user.Delete()
+
+	//db.TruncateTable("users")
+	users := models.ListUsers()
+	
+	fmt.Println(users)
 	db.Close()
 }

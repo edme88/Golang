@@ -55,20 +55,25 @@ func ExistsTable(tableName string) bool{
 	return rows.Next()
 }
 
-// //Polimorfismo de Exec
-// func Exec(query string, args ...any) (sql.Result, error){
-// 	result, err := db.Exec(query, args...)
-// 	if err != nil {
-// 		fmt.Println(err)
-// 	}
-// 	return result, err
-// }
+//Polimorfismo de Exec
+func Exec(query string, args ...any) (sql.Result, error){
+	result, err := db.Exec(query, args...)
+	if err != nil {
+		fmt.Println(err)
+	}
+	return result, err
+}
 
-// //Polimorfimos de Query
-// func Query(query string, args ...interface{}) (*sql.Rows, error){
-// 	rows, err := db.Query(query, args...)
-// 	if err != nil {
-// 		fmt.Println(err)
-// 	}
-// 	return rows, err
-// }
+//Polimorfimos de Query
+func Query(query string, args ...interface{}) (*sql.Rows, error){
+	rows, err := db.Query(query, args...)
+	if err != nil {
+		fmt.Println(err)
+	}
+	return rows, err
+}
+
+func TruncateTable(tableName string){
+	sql := fmt.Sprintf("TRUNCATE %s", tableName)
+	db.Exec(sql)
+}
