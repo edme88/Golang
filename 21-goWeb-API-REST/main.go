@@ -13,7 +13,7 @@ func main(){
 	mux := mux.NewRouter()
 
 	//Endpoint
-	mux.HandleFunc("/api/user/", handlers.GetUsers).Methods("GET")
+	mux.HandleFunc("/api/users/", handlers.GetUsers).Methods("GET")
 	mux.HandleFunc("/api/user/{id:[0-9]+}", handlers.GetUser).Methods("GET")
 	mux.HandleFunc("/api/user/", handlers.CreateUser).Methods("POST")
 	mux.HandleFunc("/api/user/{id:[0-9]+}", handlers.UpdateUser).Methods("PUT")

@@ -5,10 +5,10 @@ import (
 ) //cambiarlo del original
 
 type User struct{
-	Id 		 int64
-	Username string
-	Password string
-	Email	 string
+	Id 		 int64   `json:"id"`
+	Username string  `json:"username"`
+	Password string  `json:"password"`
+	Email	 string  `json:"email"`
 }
 
 type Users []User

@@ -2,6 +2,8 @@
 
 171. Preparar para PAI REST
 172. Endpoints y Handlers
+173. Listar registrosResponder con JSON
+174. Responder con JSON
 
 Links:
 [Gorila Mux](https://github.com/gorilla/mux)
@@ -26,3 +28,5 @@ go get -u github.com/gorilla/mux
 ```
 fresh
 ```
+
+GoLang123#
